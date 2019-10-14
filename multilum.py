@@ -2,12 +2,14 @@ import os
 import io
 import urllib.request
 import zipfile
+from collections.abc import Iterable
 
 import tqdm
 import numpy as np
 
 from lanczos import resize_lanczos
-
+import sqlite3
+from collections import namedtuple
 # PIL and OpenEXR are imported lazily if needed
 
 ############################## DEV
@@ -16,7 +18,7 @@ import matplotlib.pyplot as plot
 
 
 # ____________ Repository-wide functions ____________
-BASE_URL = "http://vrbox.csail.mit.edu:8000/static/scratch/scenezips"
+BASE_URL = "https://data.csail.mit.edu/multilum"
 basedir = os.path.join(os.environ["HOME"], ".multilum")
 
 def set_datapath(path):
@@ -113,56 +115,78 @@ def generate_mipmap(scene, mip, hdr):
     I = resize_lanczos(I, outh, outw)
     writeimage(I, impath(scene, dir, mip, hdr))
 
-
+def generate_probe_size(scene, material, size, hdr):
+  print("generating %s probe size %d for scene %s/hdr=%d" % (material, size, scene, hdr))
+  for dir in range(25):
+    I = readimage(probepath(scene, dir, "chrome", 256, hdr))
+    I = resize_lanczos(I, size, size)
+    writeimage(I, probepath(scene, dir, "chrome", size, hdr))
 
 def scene_is_downloaded(scene, mip, hdr):
-  testfile = impath(scene, 0, mip, hdr)
+  testfile = impath(scene, 24, mip, hdr)
   return os.path.isfile(testfile)
 
 def probe_is_downloaded(scene, material, size, hdr):
-  testfile = probepath(scene, 0, material, size, hdr)
+  testfile = probepath(scene, 24, material, size, hdr)
   # print("testing file", testfile)
   return os.path.isfile(testfile)
 
 def download_scenes(scenes=None, *, mip=2, hdr=False, force=False):
   def download_scene(scene):
     fmt = "exr" if hdr else "jpg"
-    url = BASE_URL + "/%s_mip%d_%s.zip" % (scene, mip, fmt)
+    url = BASE_URL + "/%s/%s_mip%d_%s.zip" % (scene, scene, mip, fmt)
     req = urllib.request.urlopen(url)
     archive = zipfile.ZipFile(io.BytesIO(req.read()))
     archive.extractall(basedir)
 
-  iterator = tqdm.tqdm(scenes) if len(scenes) > 1 else scenes
+  print("Downloading %d scenes" % len(scenes))
 
+  iterator = tqdm.tqdm(scenes) if len(scenes) > 1 else scenes
   for scene in iterator:
     scene = name(scene)
 
     if force or not scene_is_downloaded(scene, mip, hdr):
       download_scene(scene)
 
-def ensure_downloaded(scene, mip, hdr):
+def ensure_downloaded(scenes, mip, hdr):
+  if not isinstance(scenes, Iterable):
+    scenes = [scenes]
   # from pdb import set_trace as st
   # st()
-  if not scene_is_downloaded(scene, mip, hdr):
-    if has_larger_version(scene, mip, hdr):
-      generate_mipmap(scene, mip, hdr)
-    else:
 
-      download_scenes([scene], mip=mip, hdr=hdr)
+  not_downloaded = []
+
+  for scene in scenes:
+    if not scene_is_downloaded(scene, mip, hdr):
+      if has_larger_version(scene, mip, hdr):
+        generate_mipmap(scene, mip, hdr)
+      else:
+        not_downloaded.append(scene)
+  if not_downloaded:
+    download_scenes(not_downloaded, mip=mip, hdr=hdr)
 
 def ensure_probe_downloaded(scene, material, size, hdr):
   if not probe_is_downloaded(scene, material, size, hdr):
-    raise ValueError("Do not have %s probe (size=%d, hdr=%d) for scene %s" % (material, size, hdr, scene))
+    ensure_downloaded(scene, 2, hdr)
+    generate_probe_size(scene, material, size, hdr)
 
 
 def all_scenes():
-  pass
+  conn = sqlite3.connect(os.path.join(os.path.dirname(os.path.abspath(__file__)), "db.sqlite3"))
+  c = conn.cursor()
+  ret = []
+  for row in c.execute('''SELECT name from dset_browser_scene where valid=1'''):
+    ret.append(Scene(row[0]))
+  conn.close()
 
-def test_scene_names():
-  pass
+  return ret
 
-def train_scene_names():
-  pass
+
+def test_scenes():
+  return [s for s in all_scenes() if s.name.startswith('everett')]
+
+def train_scenes():
+  return [s for s in all_scenes() if not s.name.startswith('everett')]
 
 # ____________ Utility functions ____________
 def name(obj_or_name):
@@ -200,10 +224,10 @@ def query_images(scenes=None, dirs=None, *, mip=2, hdr=False):
   h, w = imshape(mip)
   ret = np.zeros([len(scenes), len(dirs), h, w, 3], dtype=dtype(hdr))
 
+  ensure_downloaded(scenes, mip=mip, hdr=hdr)
   i = 0
   for iscene, scene in enumerate(scenes):
     for idir, dir in enumerate(dirs):
-      ensure_downloaded(scene, mip=mip, hdr=hdr)
       ret[iscene, idir] = readimage(impath(scene, dir, mip, hdr))
   return ret
 
@@ -228,27 +252,44 @@ def query_probes(scenes=None, dirs=None, material="chrome", *, size=256, hdr=Fal
 
 def main():
   from lum import plt
-  mip=2
-  # scene_names = ["main_admin1", "summer_bathroom8"]
-  hdr=True
-  # download_scenes(scene_names, hdr=hdr)
+  # download_scenes(all_scenes(), mip=2, hdr=False)
+  # return
 
-  scene_names = ["main_admin1", "summer_bathroom8", "summer_bathroom7"]
+  # scenes = all_scenes()
+  scenes = ['main_experiment120', 'kingston_dining10', 'elm_revis_kitchen14']
 
   # download_scenes(scene_names, mip=mip, hdr=hdr, force=True)
 
-  I = query_images(scene_names, dirs=NOFRONTAL_DIRECTIONS, hdr=hdr, mip=mip)
-  P = query_probes(scene_names, dirs=NOFRONTAL_DIRECTIONS, hdr=hdr)
+  print("get images")
+  I = query_images(scenes)
+
+  # print("get probes")
+  # P = query_probes(scenes)
+  # print("P shape", P.shape)
+
+  # (3 scenes, 25 light directions, height, width, rgb)
   print("I shape", I.shape)
-  print("P shape", P.shape)
-  for scene, probe in zip(I, P):
-    for imdir, probedir in zip(scene, probe):
-      plt.subplot(121)
-      plt.cshow(imdir)
-      plt.subplot(122)
-      plt.cshow(probedir)
-      plt.show()
-      break
+
+  dir1 = 14
+  dir2 = 24
+
+  for i in range(3):
+    plt.subplot(2,3,i+1)
+    plt.imshow(I[i,dir1])
+    plt.subplot(2,3,i+4)
+    plt.imshow(I[i,dir2])
+
+
+  plt.show()
+  #
+  # for scene, probe in zip(I, P):
+  #   for imdir, probedir in zip(scene, probe):
+  #     plt.subplot(121)
+  #     plt.imshow(imdir)
+  #     plt.subplot(122)
+  #     plt.imshow(probedir)
+  #     plt.show()
+  #     break
 
 
 
@@ -264,10 +305,16 @@ def query_scenes(scenes=None, locations=None, room_types=None):
   if room_types is None:
     room_types = all_room_types()
 
+Scene = namedtuple('Scene', ['name'])
+# class Scene:
+#   def __init__(self, name=None):
+#     if name == None:
+#       name = ""
+#     self.name = name
 
-class Scene:
-  def images(self, dirs=None, *, mip=2, hdr=False):
-    pass
+
+#   def images(self, dirs=None, *, mip=2, hdr=False):
+#     pass
 
 class Location:
   def images(self, scenes=None, *, dirs=None, mip=2, hdr=False):
