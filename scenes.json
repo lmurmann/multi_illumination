@@ -1,0 +1,6092 @@
+[
+ {
+  "name": "32-d414-revisit4",
+  "room": "d414",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "32-d414-revisit3",
+  "room": "d414",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "32-d414-revisit2",
+  "room": "d414",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "32-d414-revisit1",
+  "room": "d414",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "32-d410-revisit5",
+  "room": "d410",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "32-d410-revisit4",
+  "room": "d410",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "32-d410-revisit3",
+  "room": "d410",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "32-d410-revisit2",
+  "room": "d410",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "32-d410-revisit1",
+  "room": "d410",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "marlborough_living9",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living8",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living7",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living6",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living5",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living4",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living3",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living2",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living17",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living16",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living15",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living14",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living13",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living12",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living11",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living10",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_living1",
+  "room": "living",
+  "building": "marlborough",
+  "room_type": "living"
+ },
+ {
+  "name": "marlborough_kitchen9",
+  "room": "kitchen",
+  "building": "marlborough",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "marlborough_kitchen8",
+  "room": "kitchen",
+  "building": "marlborough",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "marlborough_kitchen7",
+  "room": "kitchen",
+  "building": "marlborough",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "marlborough_kitchen6",
+  "room": "kitchen",
+  "building": "marlborough",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "marlborough_kitchen5",
+  "room": "kitchen",
+  "building": "marlborough",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "marlborough_kitchen4",
+  "room": "kitchen",
+  "building": "marlborough",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "marlborough_kitchen3",
+  "room": "kitchen",
+  "building": "marlborough",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "marlborough_kitchen2",
+  "room": "kitchen",
+  "building": "marlborough",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "marlborough_kitchen10",
+  "room": "kitchen",
+  "building": "marlborough",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "marlborough_kitchen1",
+  "room": "kitchen",
+  "building": "marlborough",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "marlborough_bathroom3",
+  "room": "bathroom",
+  "building": "marlborough",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "marlborough_bathroom2",
+  "room": "bathroom",
+  "building": "marlborough",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "marlborough_bathroom1",
+  "room": "bathroom",
+  "building": "marlborough",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_1floor_study9",
+  "room": "1floor_study",
+  "building": "elm",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_1floor_study8",
+  "room": "1floor_study",
+  "building": "elm",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_1floor_study7",
+  "room": "1floor_study",
+  "building": "elm",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_1floor_study6",
+  "room": "1floor_study",
+  "building": "elm",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_1floor_study5",
+  "room": "1floor_study",
+  "building": "elm",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_1floor_study4",
+  "room": "1floor_study",
+  "building": "elm",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_1floor_study3",
+  "room": "1floor_study",
+  "building": "elm",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_1floor_study2",
+  "room": "1floor_study",
+  "building": "elm",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_1floor_study10",
+  "room": "1floor_study",
+  "building": "elm",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_1floor_study1",
+  "room": "1floor_study",
+  "building": "elm",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_1floor_bedroom9",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom8",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom7",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom6",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom5",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom4",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom3",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom2",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom10",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom1",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bathroom9",
+  "room": "1floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_1floor_bathroom8",
+  "room": "1floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_1floor_bathroom7",
+  "room": "1floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_1floor_bathroom6",
+  "room": "1floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_1floor_bathroom5",
+  "room": "1floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_1floor_bathroom4",
+  "room": "1floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_1floor_bathroom3",
+  "room": "1floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_1floor_bathroom2",
+  "room": "1floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_1floor_bathroom10",
+  "room": "1floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_1floor_bathroom1",
+  "room": "1floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bedroom9",
+  "room": "2floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom8",
+  "room": "2floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom7",
+  "room": "2floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom6",
+  "room": "2floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom4",
+  "room": "2floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom3",
+  "room": "2floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom2",
+  "room": "2floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom11",
+  "room": "2floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom10",
+  "room": "2floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom1",
+  "room": "2floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bathroom9",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom8",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom7",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom6",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom5",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom4",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom3",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom2",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom15",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom14",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom13",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom12",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom11",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom10",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bathroom1",
+  "room": "2floor_bathroom",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_2floor_bedroom_revisit4",
+  "room": "2floor_bedroom_revisit",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom_revisit3",
+  "room": "2floor_bedroom_revisit",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom_revisit2",
+  "room": "2floor_bedroom_revisit",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_2floor_bedroom_revisit1",
+  "room": "2floor_bedroom_revisit",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom12",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "elm_1floor_bedroom11",
+  "room": "1floor_bedroom",
+  "building": "elm",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "willow_study9",
+  "room": "study",
+  "building": "willow",
+  "room_type": "office"
+ },
+ {
+  "name": "willow_study8",
+  "room": "study",
+  "building": "willow",
+  "room_type": "office"
+ },
+ {
+  "name": "willow_study6",
+  "room": "study",
+  "building": "willow",
+  "room_type": "office"
+ },
+ {
+  "name": "willow_study5",
+  "room": "study",
+  "building": "willow",
+  "room_type": "office"
+ },
+ {
+  "name": "willow_study4",
+  "room": "study",
+  "building": "willow",
+  "room_type": "office"
+ },
+ {
+  "name": "willow_study3",
+  "room": "study",
+  "building": "willow",
+  "room_type": "office"
+ },
+ {
+  "name": "willow_study10",
+  "room": "study",
+  "building": "willow",
+  "room_type": "office"
+ },
+ {
+  "name": "willow_bedroom4",
+  "room": "bedroom",
+  "building": "willow",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "willow_bedroom3",
+  "room": "bedroom",
+  "building": "willow",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "willow_bedroom1",
+  "room": "bedroom",
+  "building": "willow",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "willow_bathroomb3",
+  "room": "bathroomb",
+  "building": "willow",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "willow_bathroomb2",
+  "room": "bathroomb",
+  "building": "willow",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "willow_bathroomb1",
+  "room": "bathroomb",
+  "building": "willow",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "willow_bathroom6",
+  "room": "bathroom",
+  "building": "willow",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "willow_bathroom5",
+  "room": "bathroom",
+  "building": "willow",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "willow_bathroom4",
+  "room": "bathroom",
+  "building": "willow",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "willow_bathroom3",
+  "room": "bathroom",
+  "building": "willow",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "willow_bathroom2",
+  "room": "bathroom",
+  "building": "willow",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "willow_bathroom1",
+  "room": "bathroom",
+  "building": "willow",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "willow_atrium4",
+  "room": "atrium",
+  "building": "willow",
+  "room_type": "lobby"
+ },
+ {
+  "name": "willow_atrium3",
+  "room": "atrium",
+  "building": "willow",
+  "room_type": "lobby"
+ },
+ {
+  "name": "willow_atrium1",
+  "room": "atrium",
+  "building": "willow",
+  "room_type": "lobby"
+ },
+ {
+  "name": "elm_storage15",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage22",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage14",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage5",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage17",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage4",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage16",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage30",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage23",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage21",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage2",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage27",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage19",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage3",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage10",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage12",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage9",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage8",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage28",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage18",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage13",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage20",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage25",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_storage29",
+  "room": "storage",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "everett_lobby13",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_dining1",
+  "room": "dining",
+  "building": "everett",
+  "room_type": "dining"
+ },
+ {
+  "name": "everett_lobby20",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_dining2",
+  "room": "dining",
+  "building": "everett",
+  "room_type": "dining"
+ },
+ {
+  "name": "everett_kitchen8",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "everett_lobby2",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_kitchen18",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "everett_lobby16",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_kitchen14",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "everett_living2",
+  "room": "living",
+  "building": "everett",
+  "room_type": "living"
+ },
+ {
+  "name": "everett_kitchen9",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "everett_kitchen2",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "everett_kitchen6",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "everett_living4",
+  "room": "living",
+  "building": "everett",
+  "room_type": "living"
+ },
+ {
+  "name": "everett_lobby4",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_lobby14",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_lobby18",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_lobby19",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_kitchen12",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "everett_lobby15",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_lobby3",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_lobby12",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_lobby17",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_kitchen4",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "everett_lobby6",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_kitchen5",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "everett_lobby11",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_kitchen17",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "everett_lobby1",
+  "room": "lobby",
+  "building": "everett",
+  "room_type": "lobby"
+ },
+ {
+  "name": "everett_kitchen7",
+  "room": "kitchen",
+  "building": "everett",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_bigbathroom3",
+  "room": "bigbathroom",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_library3",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_library20",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_library9",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_kidsroom3",
+  "room": "kidsroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_kidsroom4",
+  "room": "kidsroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_library15",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_library4",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_bigbathroom4",
+  "room": "bigbathroom",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_smallbathroom3",
+  "room": "smallbathroom",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_kidsroom7",
+  "room": "kidsroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_guestroom4",
+  "room": "guestroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_bigbathroom7",
+  "room": "bigbathroom",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_library24",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_library14",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_library26",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_library5",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_bigbathroom5",
+  "room": "bigbathroom",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_kidsroom5",
+  "room": "kidsroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_bedroom5",
+  "room": "bedroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_kidsroom2",
+  "room": "kidsroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_kidsroom8",
+  "room": "kidsroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_bigbathroom2",
+  "room": "bigbathroom",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_library8",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_smallbathroom1",
+  "room": "smallbathroom",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_library2",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_library19",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_library17",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_bigbathroom6",
+  "room": "bigbathroom",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_library6",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_guestroom5",
+  "room": "guestroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_kidsroom6",
+  "room": "kidsroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_bedroom6",
+  "room": "bedroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_shoes2",
+  "room": "shoes",
+  "building": "kingston",
+  "room_type": "lobby"
+ },
+ {
+  "name": "kingston_guestroom2",
+  "room": "guestroom",
+  "building": "kingston",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "kingston_library1",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_library22",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_bigbathroom1",
+  "room": "bigbathroom",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_library10",
+  "room": "library",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_laundry11",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry9",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry4",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry16",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry20",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry12",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry15",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry17",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry2",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry8",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry14",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry1",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry19",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry13",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_laundry29",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "14n_copyroom6",
+  "room": "copyroom",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office17",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_laundry23",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "14n_office7",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_copyroom1",
+  "room": "copyroom",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office10",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_laundry24",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "14n_office14",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office4",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office3",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office9",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_copyroom8",
+  "room": "copyroom",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_laundry27",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "14n_office19",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office13",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_laundry25",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "14n_office11",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office1",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_laundry31",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "14n_office6",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_copyroom10",
+  "room": "copyroom",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_laundry28",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "14n_office20",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office12",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office18",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_laundry26",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "14n_office8",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office2",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "elm_laundry32",
+  "room": "laundry",
+  "building": "elm",
+  "room_type": "basement"
+ },
+ {
+  "name": "14n_office5",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "14n_office15",
+  "room": "office",
+  "building": "memorial",
+  "room_type": "office"
+ },
+ {
+  "name": "summer_bedroom4",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bathroom2",
+  "room": "bathroom",
+  "building": "summer",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "summer_bathroom8",
+  "room": "bathroom",
+  "building": "summer",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "summer_living10",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_bedroom15",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_kitchen7",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_living6",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_living1",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_bathroom10",
+  "room": "bathroom",
+  "building": "summer",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "summer_bedroom20",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bedroom12",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bedroom18",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_living17",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_bedroom3",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bedroom9",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bedroom7",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_living13",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_kitchen10",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_kitchen4",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_bedroom16",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_living5",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_bedroom24",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bedroom23",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_living8",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_living2",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_kitchen3",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_kitchen9",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_bedroom11",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bathroom6",
+  "room": "bathroom",
+  "building": "summer",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "summer_living14",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_living16",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_bathroom4",
+  "room": "bathroom",
+  "building": "summer",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "summer_bedroom8",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bathroom11",
+  "room": "bathroom",
+  "building": "summer",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "summer_bedroom21",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bedroom19",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_kitchen1",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_bedroom13",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_kitchen6",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_bedroom14",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bedroom26",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_living7",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_bedroom5",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bathroom3",
+  "room": "bathroom",
+  "building": "summer",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "summer_bathroom7",
+  "room": "bathroom",
+  "building": "summer",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "summer_living15",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_bedroom1",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bedroom22",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_living3",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_living9",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_bedroom10",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_kitchen8",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_kitchen2",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_kitchen11",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_bedroom17",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_kitchen5",
+  "room": "kitchen",
+  "building": "summer",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "summer_living4",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "summer_bedroom25",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_bedroom6",
+  "room": "bedroom",
+  "building": "summer",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "summer_living12",
+  "room": "living",
+  "building": "summer",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_living17",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bedroom3",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bathroom6",
+  "room": "bathroom",
+  "building": "joy",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "joy_bedroom30",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bedroom9",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bedroom11",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_living6",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_hallway3",
+  "room": "hallway",
+  "building": "joy",
+  "room_type": "lobby"
+ },
+ {
+  "name": "joy_bedroom23",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bedroom29",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_hallway4",
+  "room": "hallway",
+  "building": "joy",
+  "room_type": "lobby"
+ },
+ {
+  "name": "joy_bedroom24",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bedroom16",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_living1",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bedroom4",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bathroom1",
+  "room": "bathroom",
+  "building": "joy",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "joy_bathroom10",
+  "room": "bathroom",
+  "building": "joy",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "joy_living10",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_living14",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bathroom5",
+  "room": "bathroom",
+  "building": "joy",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "joy_living5",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bedroom18",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bedroom12",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bedroom20",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_kitchen3",
+  "room": "kitchen",
+  "building": "joy",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "joy_kitchen4",
+  "room": "kitchen",
+  "building": "joy",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "joy_bedroom27",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_hallway7",
+  "room": "hallway",
+  "building": "joy",
+  "room_type": "lobby"
+ },
+ {
+  "name": "joy_living2",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bedroom15",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_living8",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bathroom8",
+  "room": "bathroom",
+  "building": "joy",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "joy_bathroom2",
+  "room": "bathroom",
+  "building": "joy",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "joy_bedroom7",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_living13",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bedroom5",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_living11",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bedroom25",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_hallway5",
+  "room": "hallway",
+  "building": "joy",
+  "room_type": "lobby"
+ },
+ {
+  "name": "joy_kitchen6",
+  "room": "kitchen",
+  "building": "joy",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "joy_bedroom17",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_living7",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bedroom10",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_kitchen1",
+  "room": "kitchen",
+  "building": "joy",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "joy_bedroom28",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bedroom22",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_hallway2",
+  "room": "hallway",
+  "building": "joy",
+  "room_type": "lobby"
+ },
+ {
+  "name": "joy_living16",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bedroom8",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bedroom2",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bathroom7",
+  "room": "bathroom",
+  "building": "joy",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "joy_bathroom3",
+  "room": "bathroom",
+  "building": "joy",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "joy_bedroom6",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bathroom9",
+  "room": "bathroom",
+  "building": "joy",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "joy_living12",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_kitchen5",
+  "room": "kitchen",
+  "building": "joy",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "joy_hallway6",
+  "room": "hallway",
+  "building": "joy",
+  "room_type": "lobby"
+ },
+ {
+  "name": "joy_bedroom26",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_bedroom14",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_living9",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_living3",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bedroom13",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_living4",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bedroom19",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_hallway1",
+  "room": "hallway",
+  "building": "joy",
+  "room_type": "lobby"
+ },
+ {
+  "name": "joy_bedroom21",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "joy_kitchen2",
+  "room": "kitchen",
+  "building": "joy",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "joy_living15",
+  "room": "living",
+  "building": "joy",
+  "room_type": "living"
+ },
+ {
+  "name": "joy_bathroom4",
+  "room": "bathroom",
+  "building": "joy",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "joy_bedroom1",
+  "room": "bedroom",
+  "building": "joy",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "west_kitchen17",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_living1",
+  "room": "living",
+  "building": "west",
+  "room_type": "living"
+ },
+ {
+  "name": "west_study16",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_kitchen2",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_study9",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_study3",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_kitchen8",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_bathroomb4",
+  "room": "bathroomb",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_bedroom1",
+  "room": "bedroom",
+  "building": "west",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "west_bathroom6",
+  "room": "bathroom",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_bathroom1",
+  "room": "bathroom",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_bathroomb3",
+  "room": "bathroomb",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_bedroom6",
+  "room": "bedroom",
+  "building": "west",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "west_kitchen5",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_study4",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_living6",
+  "room": "living",
+  "building": "west",
+  "room_type": "living"
+ },
+ {
+  "name": "west_kitchen10",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_study11",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_study15",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_living8",
+  "room": "living",
+  "building": "west",
+  "room_type": "living"
+ },
+ {
+  "name": "west_living2",
+  "room": "living",
+  "building": "west",
+  "room_type": "living"
+ },
+ {
+  "name": "west_kitchen14",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_kitchen1",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_bathroom5",
+  "room": "bathroom",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_bedroom2",
+  "room": "bedroom",
+  "building": "west",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "west_bedroom5",
+  "room": "bedroom",
+  "building": "west",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "west_bathroom2",
+  "room": "bathroom",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_study20",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_kitchen6",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_study12",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_study18",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_kitchen13",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_living5",
+  "room": "living",
+  "building": "west",
+  "room_type": "living"
+ },
+ {
+  "name": "west_study5",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_kitchen4",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_study10",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_kitchen11",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_living7",
+  "room": "living",
+  "building": "west",
+  "room_type": "living"
+ },
+ {
+  "name": "west_bathroomb2",
+  "room": "bathroomb",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_bathroomb5",
+  "room": "bathroomb",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_study17",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_kitchen16",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_kitchen9",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_study2",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_study8",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_kitchen3",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_study21",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_kitchen7",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_study19",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_living4",
+  "room": "living",
+  "building": "west",
+  "room_type": "living"
+ },
+ {
+  "name": "west_kitchen12",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_study13",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_kitchen18",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_bathroomb1",
+  "room": "bathroomb",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_bedroom4",
+  "room": "bedroom",
+  "building": "west",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "west_bathroom3",
+  "room": "bathroom",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_bathroom4",
+  "room": "bathroom",
+  "building": "west",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "west_bedroom3",
+  "room": "bedroom",
+  "building": "west",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "west_kitchen15",
+  "room": "kitchen",
+  "building": "west",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "west_living3",
+  "room": "living",
+  "building": "west",
+  "room_type": "living"
+ },
+ {
+  "name": "west_study14",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "west_living9",
+  "room": "living",
+  "building": "west",
+  "room_type": "living"
+ },
+ {
+  "name": "west_study1",
+  "room": "study",
+  "building": "west",
+  "room_type": "office"
+ },
+ {
+  "name": "willow_living16",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen12",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen18",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_dining2",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_dining8",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_living6",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen20",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_dining14",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_kitchen1",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen6",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_dining13",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_living1",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen27",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_dining5",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_kitchen15",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_living11",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen11",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_living15",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen29",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen23",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_living5",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_dining1",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_kitchen8",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen30",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen2",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen5",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_dining10",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_living20",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_dining6",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_living8",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen24",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_living2",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_living18",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_living12",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen16",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen26",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_dining4",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_kitchen14",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_living10",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen7",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_dining12",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_kitchen32",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_living17",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen19",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen13",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_dining9",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_dining3",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_kitchen21",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_living7",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_dining7",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_living3",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen25",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_living9",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_living13",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_living19",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen17",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen4",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_dining11",
+  "room": "dining",
+  "building": "willow",
+  "room_type": "dining"
+ },
+ {
+  "name": "willow_kitchen3",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen31",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen9",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen10",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_living14",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_living4",
+  "room": "living",
+  "building": "willow",
+  "room_type": "living"
+ },
+ {
+  "name": "willow_kitchen22",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "willow_kitchen28",
+  "room": "kitchen",
+  "building": "willow",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_basebath14",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath9",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath3",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath4",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath13",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath7",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath10",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath5",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath12",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath15",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath2",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath8",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath6",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath11",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "elm_basebath1",
+  "room": "basebath",
+  "building": "elm",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_storage11",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen21",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage5",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen13",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage23",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage29",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_floor1bath3",
+  "room": "floor1bath",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_kitchen19",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen32",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage30",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_dining5",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_living1",
+  "room": "living",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_living10",
+  "room": "living",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_living6",
+  "room": "living",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_dining8",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_storage40",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage37",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_dining2",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_kitchen14",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage24",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_floor1bath4",
+  "room": "floor1bath",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_storage8",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage2",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage16",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen26",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen7",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage6",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen3",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage18",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen28",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen22",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen9",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage12",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage20",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen10",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen31",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_living2",
+  "room": "living",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_living8",
+  "room": "living",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_dining6",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_storage33",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage39",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_dining1",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_storage34",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage43",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_living5",
+  "room": "living",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_floor1bath7",
+  "room": "floor1bath",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_storage27",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen17",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_dining11",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_kitchen4",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen25",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage15",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage1",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_floor1bath5",
+  "room": "floor1bath",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_storage25",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen15",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage3",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage9",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen6",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen27",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage17",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_living7",
+  "room": "living",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_dining3",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_storage36",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage41",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_dining9",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_dining4",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_storage31",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen1",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen20",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage10",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage4",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_floor1bath2",
+  "room": "floor1bath",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_kitchen18",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage28",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage22",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_floor1bath8",
+  "room": "floor1bath",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_kitchen12",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen16",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage26",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_floor1bath6",
+  "room": "floor1bath",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "kingston_dining10",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_storage14",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen24",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen5",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage42",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage35",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_living4",
+  "room": "living",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_kitchen30",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_living9",
+  "room": "living",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_living3",
+  "room": "living",
+  "building": "kingston",
+  "room_type": "living"
+ },
+ {
+  "name": "kingston_storage38",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_storage32",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_dining7",
+  "room": "dining",
+  "building": "kingston",
+  "room_type": "dining"
+ },
+ {
+  "name": "kingston_storage7",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen8",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage13",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen23",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen29",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_kitchen2",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage19",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_kitchen11",
+  "room": "kitchen",
+  "building": "kingston",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "kingston_storage21",
+  "room": "storage",
+  "building": "kingston",
+  "room_type": "basement"
+ },
+ {
+  "name": "kingston_floor1bath1",
+  "room": "floor1bath",
+  "building": "kingston",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "willow_basement33",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement44",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement39",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement6",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement18",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement12",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement20",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement57",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement50",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement27",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement15",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement1",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement43",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement34",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement49",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement47",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement30",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement11",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement5",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement54",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement23",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement29",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement24",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement53",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement59",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement2",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement8",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement16",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement37",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement40",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement48",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement35",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement42",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement26",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement51",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement14",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement7",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement13",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement19",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement56",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement21",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement38",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement45",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement32",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement41",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement36",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement58",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement52",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement25",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement9",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement3",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement17",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement60",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement10",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement4",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement28",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement22",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement55",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement31",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "willow_basement46",
+  "room": "basement",
+  "building": "willow",
+  "room_type": "basement"
+ },
+ {
+  "name": "elm_revis_living30",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen6",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living6",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living11",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living29",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen10",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living23",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living24",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen17",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living1",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living16",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen1",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_kitchen5",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living33",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living12",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living5",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living18",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen13",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living20",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living27",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen14",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living8",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living15",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living2",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen2",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_kitchen8",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living25",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen16",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living17",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living10",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living7",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen11",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living22",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living28",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living31",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen7",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_kitchen9",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_kitchen3",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living26",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen15",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living3",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living9",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living14",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living4",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living19",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_living13",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen18",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_kitchen12",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living21",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "elm_revis_kitchen4",
+  "room": "revis_kitchen",
+  "building": "elm",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "elm_revis_living32",
+  "room": "revis_living",
+  "building": "elm",
+  "room_type": "living"
+ },
+ {
+  "name": "main_experiment46",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment31",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment22",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment28",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment10",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment9",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment3",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment4",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment17",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment25",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment36",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment41",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment32",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment45",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment38",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment21",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment19",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment13",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment14",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment7",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment26",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment42",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment35",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment48",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment40",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment37",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment5",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment16",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment24",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment29",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment23",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment11",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment2",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment8",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment30",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment47",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment49",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment34",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment43",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment15",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment6",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment27",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment50",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment20",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment1",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment12",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment18",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment39",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment44",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment33",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment90",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment55",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment89",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment67",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment83",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment60",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment84",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment52",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment58",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment97",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment79",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment73",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment99",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment93",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment56",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment80",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment64",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment69",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment87",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment63",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment51",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment70",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment94",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment72",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment96",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment85",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment61",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment59",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment53",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment54",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment82",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment88",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment66",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment91",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment95",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment71",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment62",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment68",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment86",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment57",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment100",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment65",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment81",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment92",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment98",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_d424-11",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-9",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-3",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-4",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-16",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-20",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-18",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-12",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-7",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-15",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-17",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-5",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-2",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-8",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-10",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-14",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-6",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-1",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-13",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_d424-19",
+  "room": "d424",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "fulkerson_revis_kitchen4",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_dining3",
+  "room": "dining",
+  "building": "fulkerson",
+  "room_type": "dining"
+ },
+ {
+  "name": "fulkerson_revis_dining9",
+  "room": "dining",
+  "building": "fulkerson",
+  "room_type": "dining"
+ },
+ {
+  "name": "fulkerson_revis_living7",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_greenroom9",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_greenroom3",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_greenroom4",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_greenroom10",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_dining4",
+  "room": "dining",
+  "building": "fulkerson",
+  "room_type": "dining"
+ },
+ {
+  "name": "fulkerson_revis_kitchen3",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_kitchen9",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_kitchen7",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_living4",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_kitchen10",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_living10",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_greenroom7",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_dining7",
+  "room": "dining",
+  "building": "fulkerson",
+  "room_type": "dining"
+ },
+ {
+  "name": "fulkerson_revis_living9",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_living3",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_living1",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_dining5",
+  "room": "dining",
+  "building": "fulkerson",
+  "room_type": "dining"
+ },
+ {
+  "name": "fulkerson_revis_greenroom11",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_kitchen8",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_kitchen2",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_greenroom5",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_greenroom2",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_kitchen12",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_greenroom8",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_kitchen5",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_dining8",
+  "room": "dining",
+  "building": "fulkerson",
+  "room_type": "dining"
+ },
+ {
+  "name": "fulkerson_revis_dining2",
+  "room": "dining",
+  "building": "fulkerson",
+  "room_type": "dining"
+ },
+ {
+  "name": "fulkerson_revis_living6",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_dining10",
+  "room": "dining",
+  "building": "fulkerson",
+  "room_type": "dining"
+ },
+ {
+  "name": "fulkerson_revis_dining6",
+  "room": "dining",
+  "building": "fulkerson",
+  "room_type": "dining"
+ },
+ {
+  "name": "fulkerson_revis_living2",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_living8",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_kitchen1",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_greenroom6",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_kitchen11",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_greenroom1",
+  "room": "greenroom",
+  "building": "fulkerson",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "fulkerson_revis_living11",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_kitchen6",
+  "room": "kitchen",
+  "building": "fulkerson",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "fulkerson_revis_living5",
+  "room": "living",
+  "building": "fulkerson",
+  "room_type": "living"
+ },
+ {
+  "name": "fulkerson_revis_dining1",
+  "room": "dining",
+  "building": "fulkerson",
+  "room_type": "dining"
+ },
+ {
+  "name": "state_smallbathroom9",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_smallbathroom3",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_kitchen7",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_kitchen11",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_smallbathroom11",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_bigbathroom2",
+  "room": "bigbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_smallbathroom4",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_bedroom3",
+  "room": "bedroom",
+  "building": "state",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "state_kitchen4",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_kitchen12",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_study7",
+  "room": "study",
+  "building": "state",
+  "room_type": "office"
+ },
+ {
+  "name": "state_bigbathroom10",
+  "room": "bigbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_kitchen9",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_kitchen3",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_bigbathroom1",
+  "room": "bigbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_smallbathroom7",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_smallbathroom5",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_study11",
+  "room": "study",
+  "building": "state",
+  "room_type": "office"
+ },
+ {
+  "name": "state_kitchen10",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_kitchen1",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_smallbathroom10",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_bigbathroom4",
+  "room": "bigbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_kitchen6",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_smallbathroom2",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_smallbathroom8",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_smallbathroom6",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "state_bedroom1",
+  "room": "bedroom",
+  "building": "state",
+  "room_type": "bedroom"
+ },
+ {
+  "name": "state_study6",
+  "room": "study",
+  "building": "state",
+  "room_type": "office"
+ },
+ {
+  "name": "state_kitchen13",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_kitchen2",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_kitchen8",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_kitchen5",
+  "room": "kitchen",
+  "building": "state",
+  "room_type": "kitchen"
+ },
+ {
+  "name": "state_study1",
+  "room": "study",
+  "building": "state",
+  "room_type": "office"
+ },
+ {
+  "name": "state_smallbathroom1",
+  "room": "smallbathroom",
+  "building": "state",
+  "room_type": "bathroom"
+ },
+ {
+  "name": "main_laser5",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser22",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser10",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser17",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser25",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser2",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser8",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser6",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser21",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser19",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser13",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser14",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser1",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser9",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser3",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser16",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser24",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser23",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser11",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser4",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser15",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser20",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser12",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser18",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_laser7",
+  "room": "laser",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab23",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab11",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab1",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab16",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab6",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab24",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab20",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab2",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab18",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab12",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab8",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab5",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab15",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab7",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab17",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab25",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab22",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab10",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab14",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab4",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab21",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab9",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab13",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab19",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_drylab3",
+  "room": "drylab",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_admin1",
+  "room": "admin",
+  "building": "main",
+  "room_type": "office"
+ },
+ {
+  "name": "main_experiment111",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment108",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment102",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment105",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment116",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment118",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment112",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment120",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment101",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment106",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment115",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment117",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment104",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment103",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment109",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment110",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment114",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment107",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment113",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment119",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ },
+ {
+  "name": "main_experiment121",
+  "room": "experiment",
+  "building": "main",
+  "room_type": "lab"
+ }
+]
