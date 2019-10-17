@@ -3,10 +3,11 @@ import unittest
 import tempfile
 import shutil
 
+import numpy as np
+
 import multilum
 from multilum import query_scenes, query_rooms, query_images
 from multilum import query_materials, query_probes
-import numpy as np
 
 class TestMetaData(unittest.TestCase):
 
@@ -19,16 +20,16 @@ class TestMetaData(unittest.TestCase):
                                           room_types='bathroom')), 2)
         self.assertEqual(len(query_scenes(buildings=['everett', 'summer'])), 90)
 
-        self.assertEqual(query_scenes('everett_kitchen2')[0].room, 
+        self.assertEqual(query_scenes('everett_kitchen2')[0].room,
                          query_rooms("everett/kitchen")[0])
-    
+
 
 def mse(A, B):
     if A.dtype == 'uint8':
         A = A / 255
     if B.dtype == 'uint8':
         B = B / 255
-        
+
     diff = A - B
     return np.sum(diff*diff) / np.prod(diff.shape)
 
@@ -51,10 +52,10 @@ class TestImageLoader(unittest.TestCase):
 
         I = query_images('everett_kitchen2', dirs=[1,5,7, 9], mip=mip)
         self.assertEqual(I.shape, (1, 4, h, w, 3))
-    
+
     def test_gen_mipmaps(self):
         generated_mip = query_images('everett_kitchen2', dirs=0, mip=7)[0,0]
-        golden_mip = query_images('everett_kitchen2_golden', dirs=0, mip=7)[0,0]        
+        golden_mip = query_images('everett_kitchen2_golden', dirs=0, mip=7)[0,0]
         self.assertLess(mse(generated_mip, golden_mip), 1e-3)
 
     def test_gen_probes(self):
@@ -69,7 +70,7 @@ class TestImageLoader(unittest.TestCase):
 
         multilum.generate_probe_size(['everett_kitchen2'],
             material='chrome', size=16, hdr=False, base_size=32)
-        
+
         self.assertTrue(multilum.probe_is_downloaded(
             'everett_kitchen2', material='chrome', size=16, hdr=False))
 
@@ -80,7 +81,7 @@ class TestImageLoader(unittest.TestCase):
 
 class TestMaterialLoader(unittest.TestCase):
     def test_query_materials(self):
-        mip = 4 
+        mip = 4
         h, w = multilum.imshape(mip)
         M = query_materials('everett_kitchen2', mip=mip)
         self.assertEqual(M.shape, (1, h, w))

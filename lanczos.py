@@ -10,11 +10,10 @@ multiply. For better performance this can be replaced with  a specialized lanczo
 implementation such as Intel Integrated Performance Primitives.
 """
 
-import numpy as np
 import argparse
-import math
 from math import floor, ceil
 
+import numpy as np
 import scipy
 from scipy.sparse import csr_matrix
 
@@ -65,7 +64,6 @@ def horizontal_lanczos(I, w, comment=None):
   dt = I.dtype
   inh, inw = I.shape[:2]
   nchan = 1 if len(I.shape) == 2 else I.shape[2]
-  a = 2
   winsz = 5
   if comment:
     from lum.tictoc import tictoc

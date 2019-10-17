@@ -1,10 +1,46 @@
+"""Python SDK for "A Multi-Illumination Dataset of Indoor Object Appearance"
+
+The SDK provides access to image downloads, image resizing, pre-processed light probes,
+material annotations, and scene meta data, such as room types.
+
+Below are a example uses of the SDK
+
+Load subset of scenes like this
+I = query_images(['main_experiment120', 'kingston_dining10'])
+
+Load all test images in low resolution
+I = query_images(test_scenes(), mip=5)
+
+Load light direction 0 in HDR floating point
+I = query_images(test_scenes(), dirs=[0], mip=5, hdr=True)
+
+Get matching light probes
+P = query_probes(test_scenes())
+
+And material annotations
+M = query_materials(test_scenes(), mip=5)
+
+List all kitchen scenes
+K = query_scenes(room_types=['kitchen'])
+
+List all kitchen scenes in the training set
+K = query_scenes(train_scenes(), room_types=['kitchen'])
+
+List all room types
+T = query_room_types()
+
+Batch data download, paper download and more:
+https://projects.csail.mit.edu/illumination
+"""
+
+
+from collections.abc import Iterable
 from collections import namedtuple
 import io
 import json
 import os
 import urllib.request
 import zipfile
-from collections.abc import Iterable
 
 import numpy as np
 import tqdm
@@ -26,10 +62,10 @@ def set_datapath(path):
 
 
 # ____________ Image Query Functions ____________
-"""Directions where the flash is directly visible"""
+# Directions where the flash is directly visible
 FRONTAL_DIRECTIONS = [2, 3, 19, 20, 21, 22, 24]
 
-"""Directions where the flash is only visible indirectly"""
+# Directions where the flash is only visible indirectly
 NOFRONTAL_DIRECTIONS = [i for i in range(25) if i not in FRONTAL_DIRECTIONS]
 
 
@@ -46,7 +82,7 @@ with mip=2 (1500x1000px) for most applications. Set to mip=0 for high resolution
     hdr: boolean flag that selects between 8-bit images or linear HDR images.
 
   Returns
-    5D numpy array with shape (num_scenes, num_dirs, height, width, 3). The dattype of the 
+    5D numpy array with shape (num_scenes, num_dirs, height, width, 3). The dattype of the
 returned array is uint8 for hdr=False, float32 for hdr=True
   """
 
@@ -74,7 +110,7 @@ NOFRONAL_DIRECTIONS directions
     hdr(bool): boolean flag that selects between 8-bit images or linear HDR images.
 
   Returns
-    5D numpy array with shape (num_scenes, num_dirs, size, size, 3). The dattype of the 
+    5D numpy array with shape (num_scenes, num_dirs, size, size, 3). The dattype of the
 returned array is uint8 for hdr=False, float32 for hdr=True
   """
   scenes = sanitize_scenes_arg(scenes)
@@ -104,12 +140,12 @@ with mip=2 (1500x1000px) for most applications. Set to mip=0 for high resolution
 integer indices.
 
   Returns
-    if apply_colors is False, returns 3D numpy array with shape (num_scenes, height, width). if 
+    if apply_colors is False, returns 3D numpy array with shape (num_scenes, height, width). if
 apply_colors is True, returns 4D array with shape (num_scenes, height, width, 3). Returned array
 is always type uint8.
   """
   scenes = sanitize_scenes_arg(scenes)
-  
+
   h, w = imshape(mip)
   if apply_colors:
     shape = [len(scenes), h, w, 3]
@@ -132,50 +168,56 @@ Building = namedtuple('Building', ['name'])
 _scene_json = None
 def all_scenes():
   """List all scenes
-  
+
   Returns:
     list of Scene objects
   """
 
   global _scene_json
-  if _scene_json == None:
+  if _scene_json is None:
     with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "scenes.json")) as fh:
       _scene_json = json.loads(fh.read())
-  
+
   ret = []
   for s in _scene_json:
-    ret.append(Scene(s["name"], 
-                Room(s["room"], 
-                  Building(s["building"]), 
+    ret.append(Scene(s["name"],
+                Room(s["room"],
+                  Building(s["building"]),
                   RoomType(s["room_type"]))))
   return ret
 
 def all_buildings():
   """List all buildings
-  
+
   Returns:
     list of Building objects
   """
+  retset = set()
   for scene in all_scenes():
-    yield scene.room.building
+    retset.add(scene.room.building)
+  return list(retset)
 
 def all_rooms():
   """List all rooms
-  
+
   Returns:
     list of Room objects
   """
+  retset = set()
   for scene in all_scenes():
-    yield scene.room
+    retset.add(scene.room)
+  return list(retset)
 
 def all_room_types():
   """List all room types
-  
+
   Returns:
     list of RoomType objects
   """
+  retset = set()
   for scene in all_scenes():
-    yield scene.room.room_type
+    retset.add(scene.room.room_type)
+  return list(retset)
 
 def query_scenes(scenes=None, *, buildings=None, rooms=None, room_types=None):
   """Query subset of scenes
@@ -185,14 +227,14 @@ def query_scenes(scenes=None, *, buildings=None, rooms=None, room_types=None):
     buildings: list of building names or building objects
     rooms: list of room names "<Building>/<RoomName>" or room objects
     room_types: list of room types, e.g. ["kitchen", "basement"]
-  
+
   Returns:
     list of Scene objects
   """
   scene_names = {name(s) for s in sanitize_scenes_arg(scenes)}
   building_names = {name(b) for b in sanitize_buildings_arg(buildings)}
   room_type_names = {name(rt) for rt in sanitize_room_types_arg(room_types)}
-  room_ids = {rid for rid in sanitize_rooms_arg_to_ids(rooms)}
+  room_ids = set(sanitize_rooms_arg_to_ids(rooms))
 
   ret = []
   for scene in all_scenes():
@@ -215,12 +257,12 @@ def query_buildings(buildings=None):
     list of Building objects
   """
   building_names = {name(b) for b in sanitize_buildings_arg(buildings)}
-  
+
   ret = []
   for b in all_buildings():
     if b.name in building_names:
       ret.append(b)
-  return ret 
+  return ret
 
 
 def query_rooms(rooms=None, *, room_types=None, buildings=None):
@@ -230,13 +272,13 @@ def query_rooms(rooms=None, *, room_types=None, buildings=None):
     rooms: list of room names, e.g. "everett/kitchen", or room objects
     buildings: list of building names or building objects, e.g. ["elm", "main"]
     room_types: list of room types, e.g. ["kitchen", "basement"]
-  
+
   Returns:
     list of Room objects
   """
   building_names = {name(b) for b in sanitize_buildings_arg(buildings)}
   room_type_names = {name(rt) for rt in sanitize_room_types_arg(room_types)}
-  room_ids = {rid for rid in sanitize_rooms_arg_to_ids(rooms)}
+  room_ids = set(sanitize_rooms_arg_to_ids(rooms))
 
   ret = []
   for r in all_rooms():
@@ -252,7 +294,7 @@ def query_room_types(room_types=None):
 
   Args:
     room_types: list of room types, e.g. ["kitchen", "basement"]
-  
+
   Returns:
     list of RoomType objects
   """
@@ -310,13 +352,13 @@ def readpng_indexed(path, *, apply_palette):
   im = Image.open(path)
   if not im.mode == "P":
     raise ValueError("Expected indexed PNG")
-  
+
   if apply_palette:
     im = im.convert(mode="RGB")
     shape = (im.height, im.width, 3)
   else:
     shape = (im.height, im.width)
-    
+
   npim = np.ndarray(shape=shape, dtype="uint8", buffer=im.tobytes())
   # palette = np.ndarray(shape=[256,3], dtype="uint8", buffer=im.palette.getdata()[1])
   return npim
@@ -365,7 +407,7 @@ def writeexr(I, path):
 
 def impath(scene, dir, mip, hdr):
   """Generate path for image
-  
+
   Args:
     scene: scene name
     dir: direction number
@@ -381,19 +423,22 @@ def imshape(mip):
 
 def probepath(scene, dir, material, size, hdr):
   """Compute path for material math
-  
+
   Args:
     scene: scene name
     mip (int): mip level
   """
-  return os.path.join(basedir, name(scene), "probes", "dir_%d_%s%d.%s" % (dir, material, size, ext(hdr)))
+  return os.path.join(basedir, name(scene),
+      "probes", "dir_%d_%s%d.%s" % (dir, material, size, ext(hdr)))
 
 def material_impath(scene, mip):
+  """Generate path for material map of given scene / mip level"""
   return os.path.join(basedir, name(scene), "materials_mip%d.png" % (mip))
 
 # ____________ Per-scene functions ____________
 
 def scenepath(scene):
+  """Generate path for scene directory"""
   return os.path.join(basedir, name(scene))
 
 def has_larger_version(scene, mip, hdr):
@@ -450,7 +495,9 @@ def generate_probe_size(scenes, *, material, size, base_size, hdr):
     size: target size to generate
     hdr: HDR or not
   """
-  if size >= base_size:
+  if size == base_size:
+    return
+  elif size > base_size:
     raise ValueError("Can only generate probes that are smaller than 256px")
 
   print("generating %s probe size %d/hdr=%d for %d scenes" % (material, size,  hdr, len(scenes)))
@@ -478,12 +525,12 @@ def scene_is_downloaded(scene, mip, hdr):
 
 def probe_is_downloaded(scene, material, size, hdr):
   """Tests whether probe exists on disk as a particular (size/hdr) version.
- 
+
   Args:
     scene: scene name
     material: "gray" or "chrome"
     size: target size to generate
-    hdr: HDR or not    
+    hdr: HDR or not
 
   Returns:
     bool: True if light probe at given size/hdr exists
@@ -493,7 +540,7 @@ def probe_is_downloaded(scene, material, size, hdr):
 
 def material_is_downloaded(scene, mip):
   """Tests whether material map exists on disk as mip level.
- 
+
   Args:
     scene: scene name
     mip (int): mip that is tested
@@ -506,7 +553,7 @@ def material_is_downloaded(scene, mip):
 
 def download_scenes(scenes=None, *, mip=2, hdr=False, force=False):
   """Download and unzip a list of scenes
-  
+
   Args:
     scenes: list of scenes or scene names
     mip(int): mip level to download
@@ -514,7 +561,7 @@ def download_scenes(scenes=None, *, mip=2, hdr=False, force=False):
     force(bool): force download even if scene already exists on disk.
   """
   def download_scene(scene):
-    
+
     fmt = "exr" if hdr else "jpg"
     url = BASE_URL + "/%s/%s_mip%d_%s.zip" % (scene, scene, mip, fmt)
     req = urllib.request.urlopen(url)
@@ -532,7 +579,7 @@ def download_scenes(scenes=None, *, mip=2, hdr=False, force=False):
 
 def download_probes(scenes, *, material, size, hdr):
   """Download and unzip a light probes for list of scenes
-  
+
   Args:
     scenes: list of scenes or scene names
     material(string): "gray" or "chrome"
@@ -554,6 +601,12 @@ def download_probes(scenes, *, material, size, hdr):
     download_probe(scene)
 
 def download_materials(scenes=None, *, mip):
+  """Download material map PNG images
+
+  Args:
+    scenes: list of scenes or scene names
+    mip(int): mip level to download
+  """
 
   def download_materialmap(scene):
     os.makedirs(scenepath(scene), exist_ok=True)
@@ -572,7 +625,7 @@ def download_materials(scenes=None, *, mip):
 
 def ensure_downloaded(scenes, mip, hdr):
   """Download scenes (or generate from larger version) if needed
-  
+
   Args:
     scenes: list of scenes or scene names
     mip(int): mip level to download
@@ -594,7 +647,7 @@ def ensure_downloaded(scenes, mip, hdr):
 
 def ensure_probes_downloaded(scenes, *, material, size, hdr):
   """Download light probes (or generate from larger version) if needed
-  
+
   Args:
     scenes: list of scenes or scene names
     material(string): "gray" or "chrome"
@@ -607,22 +660,22 @@ def ensure_probes_downloaded(scenes, *, material, size, hdr):
   for scene in scenes:
     probe_loaded = probe_is_downloaded(scene, material, size, hdr)
     baseprobe_loaded = probe_is_downloaded(scene, material, 256, hdr)
-    
+
     if not probe_loaded:
       must_generate.append(scene)
-  
+
     if not probe_loaded and not baseprobe_loaded:
       must_download.append(scene)
 
   if must_download:
     download_probes(must_download, material=material, size=256, hdr=hdr)
-  
+
   if must_generate:
     generate_probe_size(scenes, material=material, size=size, base_size=256, hdr=hdr)
 
 def ensure_materials_downloaded(scenes, *, mip):
   """Download material maps if needed
-  
+
   Args:
     scenes: list of scenes or scene names
     mip(int): mip level to download
@@ -682,7 +735,7 @@ def sanitize_rooms_arg_to_ids(rooms):
     rooms = all_rooms()
   elif isinstance(rooms, (str, Room)):
     rooms = [rooms]
-  
+
   ret = []
   for room in rooms:
     if isinstance(room, Room):
@@ -698,68 +751,15 @@ def sanitize_dirs_arg(dirs):
   return dirs
 
 
-# ____________ MAIN STUB FOR DEVELOPMENT ____________
+# ____________ MAIN FUNCTION --- Example Usage ____________
 
 
-def main():
-
+def demo_multi_illumination():
   from matplotlib import pyplot as plt
 
-  M = query_probes(test_scenes(), size=16, hdr=False)
-  print(M.shape)
-  return
-
-
-  M = query_materials('main_experiment121', mip=4)
-  print(M.shape)
-  plt.subplot(121)
-  plt.imshow(M[0])
-
-  M = query_materials('main_experiment121', mip=4, apply_colors=True)
-  print(M.shape)
-  plt.subplot(122)
-  plt.imshow(M[0])
-  plt.show()
-
-
-  return
+  print("=== Multi-Illumination Image Demo ===")
   scenes = ['main_experiment120', 'kingston_dining10', 'elm_revis_kitchen14']
-
-
-  print("Buildings")
-  for loc in all_buildings():
-    print(loc)
-
-  print("Rooms")
-  for r in all_rooms():
-    print(r)
-
-  print("Room Types")
-  for rt in all_room_types():
-    print(rt)
-
-  print("Scenes")
-  for s in query_scenes():
-    print(s)
-  # return
-
-
-  # download_scenes(all_scenes(), mip=2, hdr=False)
-  # return
-
-  # scenes = all_scenes()
-
-  # download_scenes(scene_names, mip=mip, hdr=hdr, force=True)
-
-  print("get images")
-  I = query_images(scenes, mip=4, hdr=True)
-
-  # print("get probes")
-  # P = query_probes(scenes)
-  # print("P shape", P.shape)
-
-  # (3 scenes, 25 light directions, height, width, rgb)
-  print("I shape", I.shape)
+  I = query_images(scenes, mip=4)
 
   dir1 = 14
   dir2 = 24
@@ -771,6 +771,64 @@ def main():
     plt.imshow(I[i,dir2])
 
   plt.show()
+
+def demo_light_probes():
+  from matplotlib import pyplot as plt
+  scenes = ['main_experiment120', 'kingston_dining10', 'elm_revis_kitchen14']
+
+  print("=== Light Probe Demo ===")
+  P = query_probes(scenes)
+
+  for i in range(25):
+    plt.subplot(5,5,i+1)
+    plt.imshow(P[0,i])
+  plt.show()
+
+def demo_materials():
+  from matplotlib import pyplot as plt
+
+  print("=== Material Demo ===")
+  M = query_materials('main_experiment120', mip=4)
+  print(M.shape)
+  plt.subplot(121)
+  plt.imshow(M[0])
+
+  M = query_materials('main_experiment120', mip=4, apply_colors=True)
+  print(M.shape)
+  plt.subplot(122)
+  plt.imshow(M[0])
+  plt.show()
+
+def demo_meta_data():
+  print("Scenes")
+  scenes = all_scenes()
+  for s in scenes[:3]:
+    print(s)
+  print("... total %d scenes\n" % len(scenes))
+
+  print("Buildings")
+  buildings = all_buildings()
+  for loc in buildings[:3]:
+    print(loc)
+  print("... total %d buildings\n" % len(buildings))
+
+  print("Rooms")
+  rooms = all_rooms()
+  for r in rooms[:3]:
+    print(r)
+  print("... total %d rooms\n" % len(rooms))
+
+  print("Room Types")
+  room_types = all_room_types()
+  for rt in room_types[:3]:
+    print(rt)
+  print("... total %d room types\n" % len(room_types))
+
+def main():
+  demo_multi_illumination()
+  demo_light_probes()
+  demo_materials()
+  demo_meta_data()
 
 if __name__ == "__main__":
   main()
