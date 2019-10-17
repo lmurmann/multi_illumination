@@ -5,7 +5,7 @@ import shutil
 
 import multilum
 from multilum import query_scenes, query_rooms, query_images
-from multilum import query_materials
+from multilum import query_materials, query_probes
 import numpy as np
 
 class TestMetaData(unittest.TestCase):
@@ -22,6 +22,16 @@ class TestMetaData(unittest.TestCase):
         self.assertEqual(query_scenes('everett_kitchen2')[0].room, 
                          query_rooms("everett/kitchen")[0])
     
+
+def mse(A, B):
+    if A.dtype == 'uint8':
+        A = A / 255
+    if B.dtype == 'uint8':
+        B = B / 255
+        
+    diff = A - B
+    return np.sum(diff*diff) / np.prod(diff.shape)
+
 
 class TestImageLoader(unittest.TestCase):
 
@@ -41,14 +51,32 @@ class TestImageLoader(unittest.TestCase):
 
         I = query_images('everett_kitchen2', dirs=[1,5,7, 9], mip=mip)
         self.assertEqual(I.shape, (1, 4, h, w, 3))
-        
+    
     def test_gen_mipmaps(self):
         generated_mip = query_images('everett_kitchen2', dirs=0, mip=7)[0,0]
-        golden_mip = query_images('everett_kitchen2_mip7', dirs=0, mip=7)[0,0]
+        golden_mip = query_images('everett_kitchen2_golden', dirs=0, mip=7)[0,0]        
+        self.assertLess(mse(generated_mip, golden_mip), 1e-3)
+
+    def test_gen_probes(self):
+        """Test generating a 16px chrome ball from 32px base image.
+
+        The ground truth 16px reference is stored in the "golden" directory.
+        """
+        self.assertTrue(multilum.probe_is_downloaded(
+            'everett_kitchen2', material='chrome', size=32, hdr=False))
+        self.assertTrue(multilum.probe_is_downloaded(
+            'everett_kitchen2_golden', material='chrome', size=16, hdr=False))
+
+        multilum.generate_probe_size(['everett_kitchen2'],
+            material='chrome', size=16, hdr=False, base_size=32)
         
-        diff = generated_mip/255 - golden_mip/255 
-        mse = np.sum(diff*diff) / np.prod(diff.shape)
-        self.assertLess(mse, 1e-3)
+        self.assertTrue(multilum.probe_is_downloaded(
+            'everett_kitchen2', material='chrome', size=16, hdr=False))
+
+        generated_probe  = query_probes('everett_kitchen2', size=16)[0,0]
+        golden_probe = query_probes('everett_kitchen2_golden', size=16)[0,0]
+        self.assertLess(mse(generated_probe, golden_probe), 1e-3)
+
 
 class TestMaterialLoader(unittest.TestCase):
     def test_query_materials(self):

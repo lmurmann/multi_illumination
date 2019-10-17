@@ -85,9 +85,9 @@ returned array is uint8 for hdr=False, float32 for hdr=True
 
   ret = np.zeros([len(scenes), len(dirs), h, w, 3], dtype=dtype(hdr))
 
+  ensure_probes_downloaded(scenes, material=material, size=size, hdr=hdr)
   for iscene, scene in enumerate(scenes):
     for idir, dir in enumerate(dirs):
-      ensure_probe_downloaded(scene, material=material, size=size, hdr=hdr)
       ret[iscene, idir] = readimage(probepath(scene, dir, material, size, hdr))
   return ret
 
@@ -439,7 +439,7 @@ def generate_mipmap(scene, mip, hdr):
     I = resize_lanczos(I, outh, outw)
     writeimage(I, impath(scene, dir, mip, hdr))
 
-def generate_probe_size(scene, material, size, hdr):
+def generate_probe_size(scenes, *, material, size, base_size, hdr):
   """Generate downsampled light probe.
 
   Requires that the original 256px resolution has already been downloaded.
@@ -450,14 +450,17 @@ def generate_probe_size(scene, material, size, hdr):
     size: target size to generate
     hdr: HDR or not
   """
-  if size >= 256:
+  if size >= base_size:
     raise ValueError("Can only generate probes that are smaller than 256px")
 
-  print("generating %s probe size %d for scene %s/hdr=%d" % (material, size, scene, hdr))
-  for dir in range(25):
-    I = readimage(probepath(scene, dir, "chrome", 256, hdr))
-    I = resize_lanczos(I, size, size)
-    writeimage(I, probepath(scene, dir, "chrome", size, hdr))
+  print("generating %s probe size %d/hdr=%d for %d scenes" % (material, size,  hdr, len(scenes)))
+  iterator = tqdm.tqdm(scenes) if len(scenes) > 3 else scenes
+
+  for scene in iterator:
+    for dir in range(25):
+      I = readimage(probepath(scene, dir, "chrome", base_size, hdr))
+      I = resize_lanczos(I, size, size)
+      writeimage(I, probepath(scene, dir, "chrome", size, hdr))
 
 def scene_is_downloaded(scene, mip, hdr):
   """Tests whether scene exists on disk as a particular (mip/hdr) version.
@@ -511,6 +514,7 @@ def download_scenes(scenes=None, *, mip=2, hdr=False, force=False):
     force(bool): force download even if scene already exists on disk.
   """
   def download_scene(scene):
+    
     fmt = "exr" if hdr else "jpg"
     url = BASE_URL + "/%s/%s_mip%d_%s.zip" % (scene, scene, mip, fmt)
     req = urllib.request.urlopen(url)
@@ -526,6 +530,29 @@ def download_scenes(scenes=None, *, mip=2, hdr=False, force=False):
     if force or not scene_is_downloaded(scene, mip, hdr):
       download_scene(scene)
 
+def download_probes(scenes, *, material, size, hdr):
+  """Download and unzip a light probes for list of scenes
+  
+  Args:
+    scenes: list of scenes or scene names
+    material(string): "gray" or "chrome"
+    size(int): size in pixels of the requested probe set
+    hdr(bool): whether to download JPG or EXR files
+  """
+  def download_probe(scene):
+    fmt = "exr" if hdr else "jpg"
+    url = BASE_URL + "/%s/%s_probes_%dpx_%s.zip" % (scene, scene, size, fmt)
+    req = urllib.request.urlopen(url)
+    archive = zipfile.ZipFile(io.BytesIO(req.read()))
+    archive.extractall(basedir)
+
+  print("Downloading probes for %d scenes" % len(scenes))
+  iterator = tqdm.tqdm(scenes) if len(scenes) > 1 else scenes
+
+  for scene in iterator:
+    scene = name(scene)
+    download_probe(scene)
+
 def download_materials(scenes=None, *, mip):
 
   def download_materialmap(scene):
@@ -534,9 +561,12 @@ def download_materials(scenes=None, *, mip):
     req = urllib.request.urlopen(url)
     outfile = open(material_impath(scene, mip), 'wb')
     outfile.write(req.read())
-  print("Downloading %d material maps at mip %d" % (len(scenes), mip))
+    outfile.close()
 
-  for scene in scenes:
+  print("Downloading %d material maps at mip %d" % (len(scenes), mip))
+  iterator = tqdm.tqdm(scenes) if len(scenes) > 1 else scenes
+
+  for scene in iterator:
     scene = name(scene)
     download_materialmap(scene)
 
@@ -562,7 +592,7 @@ def ensure_downloaded(scenes, mip, hdr):
   if not_downloaded:
     download_scenes(not_downloaded, mip=mip, hdr=hdr)
 
-def ensure_probe_downloaded(scene, *, material, size, hdr):
+def ensure_probes_downloaded(scenes, *, material, size, hdr):
   """Download light probes (or generate from larger version) if needed
   
   Args:
@@ -572,10 +602,23 @@ def ensure_probe_downloaded(scene, *, material, size, hdr):
     hdr(bool): whether to download JPG or EXR files
   """
 
+  must_download = []
+  must_generate = []
+  for scene in scenes:
+    probe_loaded = probe_is_downloaded(scene, material, size, hdr)
+    baseprobe_loaded = probe_is_downloaded(scene, material, 256, hdr)
+    
+    if not probe_loaded:
+      must_generate.append(scene)
+  
+    if not probe_loaded and not baseprobe_loaded:
+      must_download.append(scene)
 
-  if not probe_is_downloaded(scene, material, size, hdr):
-    ensure_downloaded(scene, mip=2, hdr=hdr)
-    generate_probe_size(scene, material, size, hdr)
+  if must_download:
+    download_probes(must_download, material=material, size=256, hdr=hdr)
+  
+  if must_generate:
+    generate_probe_size(scenes, material=material, size=size, base_size=256, hdr=hdr)
 
 def ensure_materials_downloaded(scenes, *, mip):
   """Download material maps if needed
@@ -661,6 +704,12 @@ def sanitize_dirs_arg(dirs):
 def main():
 
   from matplotlib import pyplot as plt
+
+  M = query_probes(test_scenes(), size=16, hdr=False)
+  print(M.shape)
+  return
+
+
   M = query_materials('main_experiment121', mip=4)
   print(M.shape)
   plt.subplot(121)
