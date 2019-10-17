@@ -1,15 +1,16 @@
-import os
+from collections import namedtuple
 import io
+import json
+import os
 import urllib.request
 import zipfile
 from collections.abc import Iterable
 
-import tqdm
 import numpy as np
+import tqdm
 
 from lanczos import resize_lanczos
-import json
-from collections import namedtuple
+
 # PIL and OpenEXR are imported lazily if needed
 
 
@@ -23,253 +24,106 @@ def set_datapath(path):
   global basedir
   basedir = path
 
-# ____________ Image-level functions ____________
-def readimage(path):
-  """Generic image read helper"""
-  if path.endswith("exr"):
-    return readexr(path)
-  elif path.endswith("jpg"):
-    return readjpg(path)
-  else:
-    raise ValueError("Unrecognized file type for path %s" % path)
 
-def readjpg(path):
-  """JPG read helper. Requires PIL."""
-  from PIL import Image
-  return np.array(Image.open(path))
-
-def readexr(path):
-  """EXR read helper. Requires OpenEXR."""
-  import OpenEXR
-
-  fh = OpenEXR.InputFile(path)
-  dw = fh.header()['dataWindow']
-  w, h = (dw.max.x - dw.min.x + 1, dw.max.y - dw.min.y + 1)
-
-  rgb = [np.ndarray([h,w], dtype="float32", buffer=fh.channel(c)) for c in ['R', 'G', 'B']]
-  ret = np.zeros([h, w, 3], dtype='float32')
-  for i in [0,1,2]:
-    ret[:,:,i] = rgb[i]
-  return ret
-
-def writeimage(I, path):
-  """Generic image write helper"""
-  if path.endswith("exr"):
-    return writeexr(I, path)
-  elif path.endswith("jpg"):
-    return writejpg(I, path)
-  else:
-    raise ValueError("Unrecognized file type for path %s" % path)
-
-def writejpg(I, path):
-  """JPG write helper. Requires PIL."""
-
-  from PIL import Image
-  im = Image.fromarray(I)
-  im.save(path, "JPEG", quality=95)
-
-def writeexr(I, path):
-  """EXR write helper. Requires OpenEXR."""
-  import OpenEXR
-  import Imath
-  h, w = I.shape[:2]
-  head = OpenEXR.Header(w, h)
-  head["compression"] = Imath.Compression(Imath.Compression.DWAB_COMPRESSION)
-  of = OpenEXR.OutputFile(path, head)
-  R, G, B = [I[:,:,c].tobytes() for c in [0,1,2]]
-  of.writePixels({'R': R, 'G': G, 'B': B})
-
-
-def impath(scene, dir, mip, hdr):
-  """Generate path for image
-  
-  Args:
-    scene: scene name
-    dir: direction number
-    mip (int): mip level
-    hdr (bool): generate path for HDR or not
-  """
-  return os.path.join(basedir, name(scene), "dir_%d_mip%d.%s" % (dir, mip, ext(hdr)))
-
-def imshape(mip):
-  """Compute image size for different mip levels"""
-  return 4000 // 2 **mip, 6000 // 2 **mip
-
-
-def probepath(scene, dir, material, size, hdr):
-  """Compute path for light probes
-  
-  Args:
-    scene: scene name
-    dir: direction number
-    material: One of "gray" or "chrome"
-    size (int): set this to 256
-    hdr (bool): generate path for HDR or not
-  """
-  return os.path.join(basedir, name(scene), "probes", "dir_%d_%s%d.%s" % (dir, material, size, ext(hdr)))
-
-
-# ____________ Per-scene functions ____________
-
+# ____________ Image Query Functions ____________
 """Directions where the flash is directly visible"""
 FRONTAL_DIRECTIONS = [2, 3, 19, 20, 21, 22, 24]
 
 """Directions where the flash is only visible indirectly"""
 NOFRONTAL_DIRECTIONS = [i for i in range(25) if i not in FRONTAL_DIRECTIONS]
 
-def has_larger_version(scene, mip, hdr):
-  """Helper that returns whether a larger (lower) mip of a scene is downloaded
-  """
-  return get_larger_version(scene, mip, hdr) != -1
 
-def get_larger_version(scene, mip, hdr):
-  """Return index of next-largest miplevel
+def query_images(scenes=None, dirs=None, *, mip=2, hdr=False):
+  """Return a 5D tensor if images
 
   Args:
-    scene: scene name
-    mip (int): mip that we want to generate
-    hdr (bool): HDR or not
+    scenes: list of scenes (name or object) or None for all scenes
+    dirs: list of integer indices or None for all directions. Can use FRONTAL_DIRECTIONS and
+NOFRONAL_DIRECTIONS directions
+    mip: mip level index. smaller mip levels mean larger images. It is recommended to work
+with mip=2 (1500x1000px) for most applications. Set to mip=0 for high resolution
+(6000x4000px) images.
+    hdr: boolean flag that selects between 8-bit images or linear HDR images.
 
-  Returns:
-    integer mip level that exists on disk or -1 if no larger mip exists.
+  Returns
+    5D numpy array with shape (num_scenes, num_dirs, height, width, 3). The dattype of the 
+returned array is uint8 for hdr=False, float32 for hdr=True
   """
-  for testmip in range(mip-1, -1, -1):
-    if scene_is_downloaded(scene, testmip, hdr):
-      return testmip
-  return -1
 
-def generate_mipmap(scene, mip, hdr):
-  """Generate single mip level for one scene.
+  scenes = sanitize_scenes_arg(scenes)
+  dirs = sanitize_dirs_arg(dirs)
+
+  h, w = imshape(mip)
+  ret = np.zeros([len(scenes), len(dirs), h, w, 3], dtype=dtype(hdr))
+
+  ensure_downloaded(scenes, mip=mip, hdr=hdr)
+  for iscene, scene in enumerate(scenes):
+    for idir, dir in enumerate(dirs):
+      ret[iscene, idir] = readimage(impath(scene, dir, mip, hdr))
+  return ret
+
+def query_probes(scenes=None, dirs=None, material="chrome", *, size=256, hdr=False):
+  """Return a 5D tensor if images
 
   Args:
-    scene: scene name
-    mip (int): mip that we want to generate
-    hdr (bool): HDR or not
+    scenes: list of scenes (name or object) or None for all scenes
+    dirs: list of integer indices or None for all directions. Can use FRONTAL_DIRECTIONS and
+NOFRONAL_DIRECTIONS directions
+    material: "chrome" for images of the chrome ball. "gray" for plastic gray ball
+    size(int): size in pixels that will be loaded
+    hdr(bool): boolean flag that selects between 8-bit images or linear HDR images.
 
-  Raises:
-    ValueError: If no larger version of the image exists.
+  Returns
+    5D numpy array with shape (num_scenes, num_dirs, size, size, 3). The dattype of the 
+returned array is uint8 for hdr=False, float32 for hdr=True
   """
-  print("generating mipmap %d for scene %s/hdr=%d" % (mip, scene, hdr))
-  srcmip = get_larger_version(scene, mip, hdr)
-  if srcmip == -1:
-    raise ValueError("Cannot generate mip level %d for scene %s" % (mip, scene))
+  scenes = sanitize_scenes_arg(scenes)
+  dirs = sanitize_dirs_arg(dirs)
 
-  outh, outw = imshape(mip)
-  for dir in range(25):
-    I = readimage(impath(scene, dir, srcmip, hdr))
-    I = resize_lanczos(I, outh, outw)
-    writeimage(I, impath(scene, dir, mip, hdr))
 
-def generate_probe_size(scene, material, size, hdr):
-  """Generate downsampled light probe.
+  h, w = size, size
 
-  Requires that the original 256px resolution has already been downloaded.
+  ret = np.zeros([len(scenes), len(dirs), h, w, 3], dtype=dtype(hdr))
+
+  for iscene, scene in enumerate(scenes):
+    for idir, dir in enumerate(dirs):
+      ensure_probe_downloaded(scene, material=material, size=size, hdr=hdr)
+      ret[iscene, idir] = readimage(probepath(scene, dir, material, size, hdr))
+  return ret
+
+
+def query_materials(scenes=None, *, mip=2, apply_colors=False):
+  """Return a numpy array of material masks
 
   Args:
-    scene: scene name
-    material: "gray" or "chrome"
-    size: target size to generate
-    hdr: HDR or not
+    scenes: list of scenes (name or object) or None for all scenes
+    mip: mip level index. smaller mip levels mean larger images. It is recommended to work
+with mip=2 (1500x1000px) for most applications. Set to mip=0 for high resolution
+(6000x4000px) images.
+    apply_colors: If true, returns RGB masks as used in the paper. If false, returns scalar
+integer indices.
+
+  Returns
+    if apply_colors is False, returns 3D numpy array with shape (num_scenes, height, width). if 
+apply_colors is True, returns 4D array with shape (num_scenes, height, width, 3). Returned array
+is always type uint8.
   """
-  if size >= 256:
-    raise ValueError("Can only generate probes that are smaller than 256px")
-
-  print("generating %s probe size %d for scene %s/hdr=%d" % (material, size, scene, hdr))
-  for dir in range(25):
-    I = readimage(probepath(scene, dir, "chrome", 256, hdr))
-    I = resize_lanczos(I, size, size)
-    writeimage(I, probepath(scene, dir, "chrome", size, hdr))
-
-def scene_is_downloaded(scene, mip, hdr):
-  """Tests whether scene exists on disk as a particular (mip/hdr) version.
-
-  Args:
-    scene: scene name
-    mip (int): mip that we want to generate
-    hdr (bool): HDR or not
-
-  Returns:
-    bool: True if scene at given mip/hdr exists
-  """
-  testfile = impath(scene, 24, mip, hdr)
-  return os.path.isfile(testfile)
-
-def probe_is_downloaded(scene, material, size, hdr):
-  """Tests whether probe exists on disk as a particular (size/hdr) version.
- 
-  Args:
-    scene: scene name
-    material: "gray" or "chrome"
-    size: target size to generate
-    hdr: HDR or not    
-
-  Returns:
-    bool: True if scene at given mip/hdr exists
-  """
-  testfile = probepath(scene, 24, material, size, hdr)
-  return os.path.isfile(testfile)
-
-def download_scenes(scenes=None, *, mip=2, hdr=False, force=False):
-  """Download and unzip a list of scenes
+  scenes = sanitize_scenes_arg(scenes)
   
-  Args:
-    scenes: list of scenes or scene names
-    mip(int): mip level to download
-    hdr(bool): whether to download JPG or EXR files
-    force(bool): force download even if scene already exists on disk.
-  """
-  def download_scene(scene):
-    fmt = "exr" if hdr else "jpg"
-    url = BASE_URL + "/%s/%s_mip%d_%s.zip" % (scene, scene, mip, fmt)
-    req = urllib.request.urlopen(url)
-    archive = zipfile.ZipFile(io.BytesIO(req.read()))
-    archive.extractall(basedir)
+  h, w = imshape(mip)
+  if apply_colors:
+    shape = [len(scenes), h, w, 3]
+  else:
+    shape = [len(scenes), h, w]
+  ret = np.zeros(shape, dtype='uint8')
 
-  print("Downloading %d scenes" % len(scenes))
+  ensure_materials_downloaded(scenes, mip=mip)
+  for iscene, scene in enumerate(scenes):
+    ret[iscene] = read_material_image(material_impath(scene, mip=mip), apply_colors=apply_colors)
+  return ret
 
-  iterator = tqdm.tqdm(scenes) if len(scenes) > 1 else scenes
-  for scene in iterator:
-    scene = name(scene)
 
-    if force or not scene_is_downloaded(scene, mip, hdr):
-      download_scene(scene)
-
-def ensure_downloaded(scenes, mip, hdr):
-  """Download scenes (or generate from larger version) if needed
-  
-  Args:
-    scenes: list of scenes or scene names
-    mip(int): mip level to download
-    hdr(bool): whether to download JPG or EXR files
-  """
-  if not isinstance(scenes, Iterable):
-    scenes = [scenes]
-
-  not_downloaded = []
-
-  for scene in scenes:
-    if not scene_is_downloaded(scene, mip, hdr):
-      if has_larger_version(scene, mip, hdr):
-        generate_mipmap(scene, mip, hdr)
-      else:
-        not_downloaded.append(scene)
-  if not_downloaded:
-    download_scenes(not_downloaded, mip=mip, hdr=hdr)
-
-def ensure_probe_downloaded(scene, material, size, hdr):
-  """Download light probes (or generate from larger version) if needed
-  
-  Args:
-    scenes: list of scenes or scene names
-    material(string): "gray" or "chrome"
-    size(int): size in pixels of the requested probe set
-    hdr(bool): whether to download JPG or EXR files
-  """
-  if not probe_is_downloaded(scene, material, size, hdr):
-    ensure_downloaded(scene, 2, hdr)
-    generate_probe_size(scene, material, size, hdr)
-
-# ____________ Meta data functions ____________
+  # ____________ Meta data functions ____________
 Scene    = namedtuple('Scene', ['name', 'room'])
 Room     = namedtuple('Room', ['name', 'building', 'room_type'])
 RoomType = namedtuple('RoomType', ['name'])
@@ -418,6 +272,328 @@ def train_scenes():
   """Return all scenes of the training set"""
   return [s for s in all_scenes() if not s.name.startswith('everett')]
 
+
+
+
+
+
+## =========== INTERNAL / ADVANCED FUNCTIONS ======================= ##
+
+# ____________ Image-level functions ____________
+def readimage(path):
+  """Generic image read helper"""
+  if path.endswith("exr"):
+    return readexr(path)
+  elif path.endswith("jpg"):
+    return readjpg(path)
+  else:
+    raise ValueError("Unrecognized file type for path %s" % path)
+
+def read_material_image(path, *, apply_colors=False):
+  """Read material PNG mask
+
+  Args:
+    path: image path
+    apply_colors: whether to apply the embedded color palette
+  """
+  return readpng_indexed(path, apply_palette=apply_colors)
+
+def readjpg(path):
+  """JPG read helper. Requires PIL."""
+  from PIL import Image
+  return np.array(Image.open(path))
+
+def readpng_indexed(path, *, apply_palette):
+  """Indexed PNG read helper. Requires PIL."""
+  from PIL import Image
+
+  im = Image.open(path)
+  if not im.mode == "P":
+    raise ValueError("Expected indexed PNG")
+  
+  if apply_palette:
+    im = im.convert(mode="RGB")
+    shape = (im.height, im.width, 3)
+  else:
+    shape = (im.height, im.width)
+    
+  npim = np.ndarray(shape=shape, dtype="uint8", buffer=im.tobytes())
+  # palette = np.ndarray(shape=[256,3], dtype="uint8", buffer=im.palette.getdata()[1])
+  return npim
+
+def readexr(path):
+  """EXR read helper. Requires OpenEXR."""
+  import OpenEXR
+
+  fh = OpenEXR.InputFile(path)
+  dw = fh.header()['dataWindow']
+  w, h = (dw.max.x - dw.min.x + 1, dw.max.y - dw.min.y + 1)
+
+  rgb = [np.ndarray([h,w], dtype="float32", buffer=fh.channel(c)) for c in ['R', 'G', 'B']]
+  ret = np.zeros([h, w, 3], dtype='float32')
+  for i in [0,1,2]:
+    ret[:,:,i] = rgb[i]
+  return ret
+
+def writeimage(I, path):
+  """Generic image write helper"""
+  if path.endswith("exr"):
+    return writeexr(I, path)
+  elif path.endswith("jpg"):
+    return writejpg(I, path)
+  else:
+    raise ValueError("Unrecognized file type for path %s" % path)
+
+def writejpg(I, path):
+  """JPG write helper. Requires PIL."""
+
+  from PIL import Image
+  im = Image.fromarray(I)
+  im.save(path, "JPEG", quality=95)
+
+def writeexr(I, path):
+  """EXR write helper. Requires OpenEXR."""
+  import OpenEXR
+  import Imath
+  h, w = I.shape[:2]
+  head = OpenEXR.Header(w, h)
+  head["compression"] = Imath.Compression(Imath.Compression.DWAB_COMPRESSION)
+  of = OpenEXR.OutputFile(path, head)
+  R, G, B = [I[:,:,c].tobytes() for c in [0,1,2]]
+  of.writePixels({'R': R, 'G': G, 'B': B})
+
+
+def impath(scene, dir, mip, hdr):
+  """Generate path for image
+  
+  Args:
+    scene: scene name
+    dir: direction number
+    mip (int): mip level
+    hdr (bool): generate path for HDR or not
+  """
+  return os.path.join(basedir, name(scene), "dir_%d_mip%d.%s" % (dir, mip, ext(hdr)))
+
+def imshape(mip):
+  """Compute image size for different mip levels"""
+  return 4000 // 2 **mip, 6000 // 2 **mip
+
+
+def probepath(scene, dir, material, size, hdr):
+  """Compute path for material math
+  
+  Args:
+    scene: scene name
+    mip (int): mip level
+  """
+  return os.path.join(basedir, name(scene), "probes", "dir_%d_%s%d.%s" % (dir, material, size, ext(hdr)))
+
+def material_impath(scene, mip):
+  return os.path.join(basedir, name(scene), "materials_mip%d.png" % (mip))
+
+# ____________ Per-scene functions ____________
+
+def scenepath(scene):
+  return os.path.join(basedir, name(scene))
+
+def has_larger_version(scene, mip, hdr):
+  """Helper that returns whether a larger (lower) mip of a scene is downloaded
+  """
+  return get_larger_version(scene, mip, hdr) != -1
+
+def get_larger_version(scene, mip, hdr):
+  """Return index of next-largest miplevel
+
+  Args:
+    scene: scene name
+    mip (int): mip that we want to generate
+    hdr (bool): HDR or not
+
+  Returns:
+    integer mip level that exists on disk or -1 if no larger mip exists.
+  """
+  for testmip in range(mip-1, -1, -1):
+    if scene_is_downloaded(scene, testmip, hdr):
+      return testmip
+  return -1
+
+def generate_mipmap(scene, mip, hdr):
+  """Generate single mip level for one scene.
+
+  Args:
+    scene: scene name
+    mip (int): mip that we want to generate
+    hdr (bool): HDR or not
+
+  Raises:
+    ValueError: If no larger version of the image exists.
+  """
+  print("generating mipmap %d for scene %s/hdr=%d" % (mip, scene, hdr))
+  srcmip = get_larger_version(scene, mip, hdr)
+  if srcmip == -1:
+    raise ValueError("Cannot generate mip level %d for scene %s" % (mip, scene))
+
+  outh, outw = imshape(mip)
+  for dir in range(25):
+    I = readimage(impath(scene, dir, srcmip, hdr))
+    I = resize_lanczos(I, outh, outw)
+    writeimage(I, impath(scene, dir, mip, hdr))
+
+def generate_probe_size(scene, material, size, hdr):
+  """Generate downsampled light probe.
+
+  Requires that the original 256px resolution has already been downloaded.
+
+  Args:
+    scene: scene name
+    material: "gray" or "chrome"
+    size: target size to generate
+    hdr: HDR or not
+  """
+  if size >= 256:
+    raise ValueError("Can only generate probes that are smaller than 256px")
+
+  print("generating %s probe size %d for scene %s/hdr=%d" % (material, size, scene, hdr))
+  for dir in range(25):
+    I = readimage(probepath(scene, dir, "chrome", 256, hdr))
+    I = resize_lanczos(I, size, size)
+    writeimage(I, probepath(scene, dir, "chrome", size, hdr))
+
+def scene_is_downloaded(scene, mip, hdr):
+  """Tests whether scene exists on disk as a particular (mip/hdr) version.
+
+  Args:
+    scene: scene name
+    mip (int): mip that we want to generate
+    hdr (bool): HDR or not
+
+  Returns:
+    bool: True if scene at given mip/hdr exists
+  """
+  testfile = impath(scene, 24, mip, hdr)
+  return os.path.isfile(testfile)
+
+def probe_is_downloaded(scene, material, size, hdr):
+  """Tests whether probe exists on disk as a particular (size/hdr) version.
+ 
+  Args:
+    scene: scene name
+    material: "gray" or "chrome"
+    size: target size to generate
+    hdr: HDR or not    
+
+  Returns:
+    bool: True if light probe at given size/hdr exists
+  """
+  testfile = probepath(scene, 24, material, size, hdr)
+  return os.path.isfile(testfile)
+
+def material_is_downloaded(scene, mip):
+  """Tests whether material map exists on disk as mip level.
+ 
+  Args:
+    scene: scene name
+    mip (int): mip that is tested
+
+  Returns:
+    bool: True if material map at given mip exists
+  """
+  testfile = material_impath(scene, mip=mip)
+  return os.path.isfile(testfile)
+
+def download_scenes(scenes=None, *, mip=2, hdr=False, force=False):
+  """Download and unzip a list of scenes
+  
+  Args:
+    scenes: list of scenes or scene names
+    mip(int): mip level to download
+    hdr(bool): whether to download JPG or EXR files
+    force(bool): force download even if scene already exists on disk.
+  """
+  def download_scene(scene):
+    fmt = "exr" if hdr else "jpg"
+    url = BASE_URL + "/%s/%s_mip%d_%s.zip" % (scene, scene, mip, fmt)
+    req = urllib.request.urlopen(url)
+    archive = zipfile.ZipFile(io.BytesIO(req.read()))
+    archive.extractall(basedir)
+
+  print("Downloading %d scenes" % len(scenes))
+
+  iterator = tqdm.tqdm(scenes) if len(scenes) > 1 else scenes
+  for scene in iterator:
+    scene = name(scene)
+
+    if force or not scene_is_downloaded(scene, mip, hdr):
+      download_scene(scene)
+
+def download_materials(scenes=None, *, mip):
+
+  def download_materialmap(scene):
+    os.makedirs(scenepath(scene), exist_ok=True)
+    url = BASE_URL + "/%s/materials_mip%d.png" % (scene, mip)
+    req = urllib.request.urlopen(url)
+    outfile = open(material_impath(scene, mip), 'wb')
+    outfile.write(req.read())
+  print("Downloading %d material maps at mip %d" % (len(scenes), mip))
+
+  for scene in scenes:
+    scene = name(scene)
+    download_materialmap(scene)
+
+def ensure_downloaded(scenes, mip, hdr):
+  """Download scenes (or generate from larger version) if needed
+  
+  Args:
+    scenes: list of scenes or scene names
+    mip(int): mip level to download
+    hdr(bool): whether to download JPG or EXR files
+  """
+  if not isinstance(scenes, Iterable):
+    scenes = [scenes]
+
+  not_downloaded = []
+
+  for scene in scenes:
+    if not scene_is_downloaded(scene, mip, hdr):
+      if has_larger_version(scene, mip, hdr):
+        generate_mipmap(scene, mip, hdr)
+      else:
+        not_downloaded.append(scene)
+  if not_downloaded:
+    download_scenes(not_downloaded, mip=mip, hdr=hdr)
+
+def ensure_probe_downloaded(scene, *, material, size, hdr):
+  """Download light probes (or generate from larger version) if needed
+  
+  Args:
+    scenes: list of scenes or scene names
+    material(string): "gray" or "chrome"
+    size(int): size in pixels of the requested probe set
+    hdr(bool): whether to download JPG or EXR files
+  """
+
+
+  if not probe_is_downloaded(scene, material, size, hdr):
+    ensure_downloaded(scene, mip=2, hdr=hdr)
+    generate_probe_size(scene, material, size, hdr)
+
+def ensure_materials_downloaded(scenes, *, mip):
+  """Download material maps if needed
+  
+  Args:
+    scenes: list of scenes or scene names
+    mip(int): mip level to download
+  """
+
+  not_loaded = []
+
+  for scene in scenes:
+    if not material_is_downloaded(scene, mip):
+      not_loaded.append(scene)
+
+  if not_loaded:
+    download_materials(not_loaded, mip=mip)
+
 # ____________ Utility functions ____________
 def name(obj_or_name):
   if isinstance(obj_or_name, str):
@@ -479,69 +655,28 @@ def sanitize_dirs_arg(dirs):
   return dirs
 
 
-# ____________ Image Query Functions ____________
-def query_images(scenes=None, dirs=None, *, mip=2, hdr=False):
-  """Return a 5D tensor if images
-
-  Args:
-    scenes: list of scenes (name or object) or None for all scenes
-    dirs: list of integer indices or None for all directions. Can use FRONTAL_DIRECTIONS and
-NOFRONAL_DIRECTIONS directions
-    mip: mip level index. smaller mip levels mean larger images. It is recommended to work
-with mip=2 (1500x1000px) for most applications. Set to mip=0 for high resolution
-(6000x4000px) images.
-    hdr: boolean flag that selects between 8-bit images or linear HDR images.
-
-  Returns
-    5D numpy array with shape (num_scenes, num_dirs, height, width, 3). The dattype of the 
-returned array is uint8 for hdr=False, float32 for hdr=True
-  """
-
-  scenes = sanitize_scenes_arg(scenes)
-  dirs = sanitize_dirs_arg(dirs)
-
-  h, w = imshape(mip)
-  ret = np.zeros([len(scenes), len(dirs), h, w, 3], dtype=dtype(hdr))
-
-  ensure_downloaded(scenes, mip=mip, hdr=hdr)
-  for iscene, scene in enumerate(scenes):
-    for idir, dir in enumerate(dirs):
-      ret[iscene, idir] = readimage(impath(scene, dir, mip, hdr))
-  return ret
-
-def query_probes(scenes=None, dirs=None, material="chrome", *, size=256, hdr=False):
-  """Return a 5D tensor if images
-
-  Args:
-    scenes: list of scenes (name or object) or None for all scenes
-    dirs: list of integer indices or None for all directions. Can use FRONTAL_DIRECTIONS and
-NOFRONAL_DIRECTIONS directions
-    material: "chrome" for images of the chrome ball. "gray" for plastic gray ball
-    size(int): size in pixels that will be loaded
-    hdr(bool): boolean flag that selects between 8-bit images or linear HDR images.
-
-  Returns
-    5D numpy array with shape (num_scenes, num_dirs, size, size, 3). The dattype of the 
-returned array is uint8 for hdr=False, float32 for hdr=True
-  """
-  scenes = sanitize_scenes_arg(scenes)
-  dirs = sanitize_dirs_arg(dirs)
-
-
-  h, w = size, size
-
-  ret = np.zeros([len(scenes), len(dirs), h, w, 3], dtype=dtype(hdr))
-
-  for iscene, scene in enumerate(scenes):
-    for idir, dir in enumerate(dirs):
-      ensure_probe_downloaded(scene, material=material, size=size, hdr=hdr)
-      ret[iscene, idir] = readimage(probepath(scene, dir, material, size, hdr))
-  return ret
-
 # ____________ MAIN STUB FOR DEVELOPMENT ____________
 
 
 def main():
+
+  from matplotlib import pyplot as plt
+  M = query_materials('main_experiment121', mip=4)
+  print(M.shape)
+  plt.subplot(121)
+  plt.imshow(M[0])
+
+  M = query_materials('main_experiment121', mip=4, apply_colors=True)
+  print(M.shape)
+  plt.subplot(122)
+  plt.imshow(M[0])
+  plt.show()
+
+
+  return
+  scenes = ['main_experiment120', 'kingston_dining10', 'elm_revis_kitchen14']
+
+
   print("Buildings")
   for loc in all_buildings():
     print(loc)
@@ -560,12 +695,10 @@ def main():
   # return
 
 
-  from matplotlib import pyplot as plt
   # download_scenes(all_scenes(), mip=2, hdr=False)
   # return
 
   # scenes = all_scenes()
-  scenes = ['main_experiment120', 'kingston_dining10', 'elm_revis_kitchen14']
 
   # download_scenes(scene_names, mip=mip, hdr=hdr, force=True)
 
