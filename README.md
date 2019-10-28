@@ -1,4 +1,4 @@
-# Python SDK for "A Multi-Illumination Dataset of Indoor Object Appearance"
+# Python SDK for "A Dataset of Multi-Illumination Images in the Wild" (ICCV 2019)
 
 The SDK provides access to image downloads, image resizing, pre-processed light probes, material masks, and scene meta data. For batch data download, paper download and more please visit  https://projects.csail.mit.edu/illumination.
 

@@ -1,4 +1,4 @@
-"""Python SDK for "A Multi-Illumination Dataset of Indoor Object Appearance"
+"""Python SDK for "A Dataset of Multi-Illumination Images in the Wild"
 
 The SDK provides access to image downloads, image resizing, pre-processed light probes,
 material annotations, and scene meta data, such as room types.
