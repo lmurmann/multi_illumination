@@ -52,7 +52,6 @@ def main():
 
   I = multilum.query_images(opts.scene, mip=opts.mip,
       dirs=opts.light_dir)[0,0]
-  P = multilum.query_probes(opts.scene, dirs=opts.light_dir, size=64)[0, 0]
 
   # extract crop
   ox = opts.cropx
