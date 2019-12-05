@@ -46,12 +46,13 @@ def main():
   if opts.checkpoint is None:
     opts.checkpoint = \
       "checkpoints/probe_predict/t_1547304767_nsteps_000050000.checkpoint"
-    ensure_checkpoint_downloaded(opts.checkpoint)
+    multilum.ensure_checkpoint_downloaded(opts.checkpoint)
 
   model = SingleImageEvaluator(opts)
 
   I = multilum.query_images(opts.scene, mip=opts.mip,
       dirs=opts.light_dir)[0,0]
+  P = multilum.query_probes(opts.scene, dirs=opts.light_dir, size=64)[0, 0]
 
   # extract crop
   ox = opts.cropx
@@ -73,17 +74,7 @@ def main():
   multilum.writejpg(cropnp, "%s.input.jpg" % opts.out)
   multilum.writejpg(pred, "%s.pred.jpg" % opts.out)
 
-def ensure_checkpoint_downloaded(cp):
-  if os.path.isfile(cp):
-    return
 
-  os.makedirs(os.path.dirname(cp), exist_ok=True)
-  url = "https://data.csail.mit.edu/multilum/%s" % cp
-  print("Download model checkpoint from %s" % url)
-  req = urllib.request.urlopen(url)
-  outfile = open(cp, 'wb')
-  outfile.write(req.read())
-  outfile.close()
 
 
 def autoexpose(I):

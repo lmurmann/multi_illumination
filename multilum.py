@@ -690,6 +690,18 @@ def ensure_materials_downloaded(scenes, *, mip):
   if not_loaded:
     download_materials(not_loaded, mip=mip)
 
+def ensure_checkpoint_downloaded(cp):
+  if os.path.isfile(cp):
+    return
+
+  os.makedirs(os.path.dirname(cp), exist_ok=True)
+  url = "https://data.csail.mit.edu/multilum/%s" % cp
+  print("Download model checkpoint from %s" % url)
+  req = urllib.request.urlopen(url)
+  outfile = open(cp, 'wb')
+  outfile.write(req.read())
+  outfile.close()
+
 # ____________ Utility functions ____________
 def name(obj_or_name):
   if isinstance(obj_or_name, str):
