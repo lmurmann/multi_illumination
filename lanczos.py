@@ -90,7 +90,11 @@ def horizontal_lanczos(I, w, comment=None):
 
   for x in range(w):
     center = x * xs
-    r = (center + srange).round().astype('int32')
+    # it is important to always round down (or up) here
+    # round-to-even will cause misaligned indices.
+    # this become especially noticeable when upsampling
+    # by integer factors
+    r = (center + srange + 0.5).astype('int32')
     weights = lanczos2((r - center) / xfltscale)
 
     # handle image bounds, normalize filter weight
@@ -160,3 +164,4 @@ def main():
 
 if __name__ == "__main__":
   main()
+
